@@ -1,0 +1,80 @@
+//Potem w folderze src, obok componentów zrób odrębne pliki scss, któe potem tutaj się po prostu zimportuje.
+//Każdy component będzie miał już na miejscu styl :) 
+
+
+
+html, body{
+    margin: 0px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+nav, .nav-tabs ul{
+    display: flex;
+    padding: 0px 24px 0px 24px;
+    height: 76px;
+    justify-content: space-between;
+    align-items: center;
+}
+nav{
+    gap: 20vw;
+}
+.nav-tabs ul{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 48px;
+    margin: 0px;
+    li{
+        font-size: 24px;
+    }
+}
+.nav-buttons{
+    font-size: 16px;
+    button{
+         padding: 4px 12px;
+         border-radius: 8px;
+         border-width: 2px;
+         border-style: solid;
+         background-color: aqua;
+         border-color: blue;
+    }
+}
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 48px 0px;
+    .desc-hero{
+       display: grid;
+       grid-template-rows: auto auto 40px auto;
+       justify-content: center;
+       button{
+        justify-self: left;
+        padding: 4px 12px;
+       }
+    }
+}
+.desc-list{
+    display: flex;
+    gap: 20px;
+
+}
+.poznaj-img-container{
+    position: relative;
+    .poznaj-h3-container{
+        position: relative;
+        top: -40px;
+    }
+}
+.poznaj-advantages-container{
+    display: flex;
+    height: 500px;
+}
+.poznaj-advantage-container{
+    width: 300px;
+    height: 0px;
+}

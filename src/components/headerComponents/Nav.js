@@ -1,16 +1,21 @@
-class Nav{
-    constructor(){
-        this.$nav = document.createElement('nav');
+import Ul from "../utilComponents/Ul.js";
+
+export default class Nav{
+    constructor(props, state){
+        this.$el = document.createElement('nav');
+        this.render(props);
     }
-    // logo(){
-    //     let $logo = `<div class="nav-logo-container">
-    //         <img src="../../../images/logo.jpg"></img>
-    //     </div>`;
-    //     return logo
-    // }
-    render(){
-        return this.$nav;
+    render(props){
+        this.$el.innerHTML = `
+            <img src="./images/site-logo2.png" class="site-logo">
+            <div class="nav-tabs">
+                <ul>
+                    ${new Ul(props.ul).$el.innerHTML}
+                </ul>
+            </div>
+            <div class="nav-buttons">
+                <a href="#form"><button>${props.navContact.contact.text}</button></a>
+                <a href="#authors">${props.navContact.authors.text}</a>
+            </div>`;
     }
 }
-const nav = new Nav().render();
-export default nav;
