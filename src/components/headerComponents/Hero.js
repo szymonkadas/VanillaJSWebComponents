@@ -5,7 +5,7 @@ export default class Hero{
     constructor(props, state){
         // this.$nav = new Nav().render();
         this.$hero = document.createElement('div');
-        this.$hero.className = "hero";
+        this.$hero.id = "hero";
         this.render(props);
     }
     render(props){

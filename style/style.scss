@@ -1,80 +1,261 @@
 //Potem w folderze src, obok componentów zrób odrębne pliki scss, któe potem tutaj się po prostu zimportuje.
 //Każdy component będzie miał już na miejscu styl :) 
 
-
-
-html, body{
+//ZMNIEJSZ CZCIONKĘ, I WGL WSZYSTKO, W PROPORCJI 10:8;
+$background-white: #E8E8E8;
+$content-white: #DFDFDF;
+$dark-white: #CCC;
+$medium-dark: #444;
+$strong-dark: #333;
+@mixin icon_text{
+    display: flex;
+    height: 24px;
+    line-height: 24px;
+    @include default_font;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    img{
+        height: 24px;
+    }
+}
+@mixin one_to_one_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+    column-gap: 5vw;
+}
+@mixin no_margin{
     margin: 0px;
+}
+@mixin no_padding{
+    padding: 0px;
+}
+@mixin default_font{
+    font-size: 20px;
+    font-family: 'Raleway', 'Times New Roman';
+    font-weight: 300;
+    color: $medium-dark;
+}
+@mixin special-font{
+    font-family: Cinzel, sans-serif;
+}
+@mixin nav-flex{
+    display: flex;
+    height: 76px;
+    justify-content: space-around;
+    align-items: center;
+}
+body, #root{
+    @include no_margin;
+    background-color: $background-white;
+    overflow-x: hidden;
+}
+*{
+    @include default_font;
+    transition: 0.4s;
+}
+h1,h2,h3{
+    @include special-font;
+    font-weight: 500;
+}
+h3,h4,h5,h6{
+    @include special-font;
+    font-weight: 700;
 }
 li{
     list-style: none;
 }
 a{
     text-decoration: none;
+    &:hover{
+        color: #222222;
+        letter-spacing: 2px;
+    }
 }
-nav, .nav-tabs ul{
-    display: flex;
-    padding: 0px 24px 0px 24px;
-    height: 76px;
-    justify-content: space-between;
-    align-items: center;
+button{
+    @include special-font;
+    padding: 4px 12px;
+    border-style: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: $dark-white;
+    &:hover{
+        background-color: $medium-dark;
+        letter-spacing: 2px;
+        color: $content-white;
+    }
 }
 nav{
-    gap: 20vw;
-}
-.nav-tabs ul{
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    gap: 48px;
-    margin: 0px;
-    li{
-        font-size: 24px;
+    position: fixed;
+    background-color: $content-white;
+    z-index: 10;    
+    width: 100%;
+    @include no_padding;
+    @include nav-flex;
+    .site-logo{
+        height: 56px;
+    }
+    .nav-tabs ul{
+        @include nav-flex;
+        @include no_margin;
+        @include no_padding;
+        justify-content: center;
+        gap: 48px;
+        .li-content{
+            @include special-font;
+            font-weight: 600;
+        }
+    }
+    .nav-buttons{
+        display: flex;
+        column-gap: 16px;
+        align-items: center;
+        button{
+             padding: 4px 12px;
+             @include default_font;
+             &:hover{
+                color: $content-white;
+             }
+        }
     }
 }
-.nav-buttons{
-    font-size: 16px;
-    button{
-         padding: 4px 12px;
-         border-radius: 8px;
-         border-width: 2px;
-         border-style: solid;
-         background-color: aqua;
-         border-color: blue;
-    }
-}
-.hero{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 48px 0px;
+
+#hero{
+    @include one_to_one_grid;
+    padding: 0px 10vw; 
+    height: 100vh;
     .desc-hero{
-       display: grid;
-       grid-template-rows: auto auto 40px auto;
-       justify-content: center;
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: max-content max-content max-content max-content max-content;
+       h1{
+            font-size: 76px;
+            line-height: 104px;
+            margin: 0px;
+       }
        button{
-        justify-self: left;
-        padding: 4px 12px;
+            justify-self: left;
+            padding: 4px 12px;
+            margin-top: 16px;
+       }
+       .desc-list-container{
+            width: fit-content;
+            .desc-list{
+                margin: 0px;
+                @include no_padding;
+                display: flex;
+                gap: 20px;
+                li{
+                    @include icon_text;
+                }
+           }
+           .desc-hr{
+                margin: 48px 0px;
+                display: block;
+                height: 2px;
+                background-color: $dark-white;
+                box-shadow: 0px 0px 10px $dark-white;
+                border-radius: 3px;
+            }
        }
     }
-}
-.desc-list{
-    display: flex;
-    gap: 20px;
-
-}
-.poznaj-img-container{
-    position: relative;
-    .poznaj-h3-container{
+    .view-hero{
+        max-width: 100%;
         position: relative;
-        top: -40px;
+        img{
+            height: 480px; //1/1
+            position: absolute;
+            border-radius: 24px;
+        }
+        #hero-img-1{
+            top: -2vh;
+            left: 14vh;
+        }
+        #hero-img-2{
+            height: 240px; //2/4
+            position: absolute;
+            left: 0px;
+            top: 316px;
+        }
+        #hero-img-3{
+            height: 323px; //2/3
+            position: relative;
+            right: -302px;
+            top: 402px;
+        }
     }
 }
-.poznaj-advantages-container{
-    display: flex;
-    height: 500px;
-}
-.poznaj-advantage-container{
-    width: 300px;
-    height: 0px;
+#explore-container{
+    height: fit-content;
+    margin: 48px 96px;
+    @include one_to_one_grid;
+    row-gap: 2vh;
+    .explore{
+        @include one_to_one_grid;
+        column-gap: 1vw;
+        height: 100%;
+        .explore-img-container{
+            position: relative;
+            img{
+                border-radius: 16px;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 60%;
+            }
+        }
+        .explore-info{
+            height: 100%;
+            padding: 24px 0px;
+            .explore-localisation-container{
+                @include icon_text;
+                width: fit-content;
+                .pointer{
+                    height: 20px;
+                    position: relative;
+                    top: -1px;
+                }
+                span{
+                    font-weight: 300;
+                }
+                &:hover{
+                    letter-spacing: 1px;
+                    span{
+                        @include default_font;
+                        font-weight: 500;
+                    }
+                    .pointer{
+                        animation-name: click;
+                        animation-duration: 0.4s;
+                    }
+                    @keyframes click{
+                        0%{
+                            height: 20px;
+                        }
+                        50%{
+                            height: 24px;
+                        }
+                        100%{
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+            .explore-description{
+                @include no_margin;
+            }
+            .explore-title{
+                font-size: 32px;
+                margin: 8px 0px;
+            }
+            .explore-link button{
+                margin-top: 16px;
+                font-weight: 500;
+            }
+        }
+    }
 }

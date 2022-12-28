@@ -1,5 +1,25 @@
-html, body {
+body, #root {
   margin: 0px;
+  background-color: #E8E8E8;
+  overflow-x: hidden;
+}
+
+* {
+  font-size: 20px;
+  font-family: "Raleway", "Times New Roman";
+  font-weight: 300;
+  color: #444;
+  transition: 0.4s;
+}
+
+h1, h2, h3 {
+  font-family: Cinzel, sans-serif;
+  font-weight: 500;
+}
+
+h3, h4, h5, h6 {
+  font-family: Cinzel, sans-serif;
+  font-weight: 700;
 }
 
 li {
@@ -9,77 +29,243 @@ li {
 a {
   text-decoration: none;
 }
+a:hover {
+  color: #222222;
+  letter-spacing: 2px;
+}
 
-nav, .nav-tabs ul {
-  display: flex;
-  padding: 0px 24px 0px 24px;
-  height: 76px;
-  justify-content: space-between;
-  align-items: center;
+button {
+  font-family: Cinzel, sans-serif;
+  padding: 4px 12px;
+  border-style: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #CCC;
+}
+button:hover {
+  background-color: #444;
+  letter-spacing: 2px;
+  color: #DFDFDF;
 }
 
 nav {
-  gap: 20vw;
-}
-
-.nav-tabs ul {
-  height: 100%;
-  justify-content: center;
-  align-items: center;
+  position: fixed;
+  background-color: #DFDFDF;
+  z-index: 10;
+  width: 100%;
   padding: 0px;
-  gap: 48px;
+  display: flex;
+  height: 76px;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .site-logo {
+  height: 56px;
+}
+nav .nav-tabs ul {
+  display: flex;
+  height: 76px;
+  justify-content: space-around;
+  align-items: center;
   margin: 0px;
+  padding: 0px;
+  justify-content: center;
+  gap: 48px;
 }
-.nav-tabs ul li {
-  font-size: 24px;
+nav .nav-tabs ul .li-content {
+  font-family: Cinzel, sans-serif;
+  font-weight: 600;
 }
-
-.nav-buttons {
-  font-size: 16px;
+nav .nav-buttons {
+  display: flex;
+  column-gap: 16px;
+  align-items: center;
 }
-.nav-buttons button {
+nav .nav-buttons button {
   padding: 4px 12px;
-  border-radius: 8px;
-  border-width: 2px;
-  border-style: solid;
-  background-color: aqua;
-  border-color: blue;
+  font-size: 20px;
+  font-family: "Raleway", "Times New Roman";
+  font-weight: 300;
+  color: #444;
+}
+nav .nav-buttons button:hover {
+  color: #DFDFDF;
 }
 
-.hero {
+#hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 48px 0px;
-}
-.hero .desc-hero {
-  display: grid;
-  grid-template-rows: auto auto 40px auto;
+  align-content: center;
   justify-content: center;
+  column-gap: 5vw;
+  padding: 0px 10vw;
+  height: 100vh;
 }
-.hero .desc-hero button {
+#hero .desc-hero {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: max-content max-content max-content max-content max-content;
+}
+#hero .desc-hero h1 {
+  font-size: 76px;
+  line-height: 104px;
+  margin: 0px;
+}
+#hero .desc-hero button {
   justify-self: left;
   padding: 4px 12px;
+  margin-top: 16px;
 }
-
-.desc-list {
+#hero .desc-hero .desc-list-container {
+  width: fit-content;
+}
+#hero .desc-hero .desc-list-container .desc-list {
+  margin: 0px;
+  padding: 0px;
   display: flex;
   gap: 20px;
 }
-
-.poznaj-img-container {
-  position: relative;
-}
-.poznaj-img-container .poznaj-h3-container {
-  position: relative;
-  top: -40px;
-}
-
-.poznaj-advantages-container {
+#hero .desc-hero .desc-list-container .desc-list li {
   display: flex;
-  height: 500px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 20px;
+  font-family: "Raleway", "Times New Roman";
+  font-weight: 300;
+  color: #444;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+#hero .desc-hero .desc-list-container .desc-list li img {
+  height: 24px;
+}
+#hero .desc-hero .desc-list-container .desc-hr {
+  margin: 48px 0px;
+  display: block;
+  height: 2px;
+  background-color: #CCC;
+  box-shadow: 0px 0px 10px #CCC;
+  border-radius: 3px;
+}
+#hero .view-hero {
+  max-width: 100%;
+  position: relative;
+}
+#hero .view-hero img {
+  height: 480px;
+  position: absolute;
+  border-radius: 24px;
+}
+#hero .view-hero #hero-img-1 {
+  top: -2vh;
+  left: 14vh;
+}
+#hero .view-hero #hero-img-2 {
+  height: 240px;
+  position: absolute;
+  left: 0px;
+  top: 316px;
+}
+#hero .view-hero #hero-img-3 {
+  height: 323px;
+  position: relative;
+  right: -302px;
+  top: 402px;
 }
 
-.poznaj-advantage-container {
-  width: 300px;
-  height: 0px;
+#explore-container {
+  height: fit-content;
+  margin: 48px 96px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-content: center;
+  column-gap: 5vw;
+  row-gap: 2vh;
+}
+#explore-container .explore {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-content: center;
+  column-gap: 5vw;
+  column-gap: 1vw;
+  height: 100%;
+}
+#explore-container .explore .explore-img-container {
+  position: relative;
+}
+#explore-container .explore .explore-img-container img {
+  border-radius: 16px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60%;
+}
+#explore-container .explore .explore-info {
+  height: 100%;
+  padding: 24px 0px;
+}
+#explore-container .explore .explore-info .explore-localisation-container {
+  display: flex;
+  height: 24px;
+  line-height: 24px;
+  font-size: 20px;
+  font-family: "Raleway", "Times New Roman";
+  font-weight: 300;
+  color: #444;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+}
+#explore-container .explore .explore-info .explore-localisation-container img {
+  height: 24px;
+}
+#explore-container .explore .explore-info .explore-localisation-container .pointer {
+  height: 20px;
+  position: relative;
+  top: -1px;
+}
+#explore-container .explore .explore-info .explore-localisation-container span {
+  font-weight: 300;
+}
+#explore-container .explore .explore-info .explore-localisation-container:hover {
+  letter-spacing: 1px;
+}
+#explore-container .explore .explore-info .explore-localisation-container:hover span {
+  font-size: 20px;
+  font-family: "Raleway", "Times New Roman";
+  font-weight: 300;
+  color: #444;
+  font-weight: 500;
+}
+#explore-container .explore .explore-info .explore-localisation-container:hover .pointer {
+  animation-name: click;
+  animation-duration: 0.4s;
+}
+@keyframes click {
+  0% {
+    height: 20px;
+  }
+  50% {
+    height: 24px;
+  }
+  100% {
+    height: 20px;
+  }
+}
+#explore-container .explore .explore-info .explore-description {
+  margin: 0px;
+}
+#explore-container .explore .explore-info .explore-title {
+  font-size: 32px;
+  margin: 8px 0px;
+}
+#explore-container .explore .explore-info .explore-link button {
+  margin-top: 16px;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */

@@ -1,48 +1,56 @@
 {
-  "Overwiew": {
-    "Castle1": {
+  "overview": {
+    "castle1": {
       "title": "Zamek w Nitrze",
       "description": "Główną dominantą najstarszego słowackiego miasta Nitra jest Zamek w Nitrze, wybudowany w miejscu ogromnego słowiańskiego grodziska, siedziby nitrzańskich książąt i władców Wielkich Moraw. Dziś jest siedzibą biskupstwa nitrzańskiego.",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_NITRA%2520hrad%2520A0006109_7e3ebe81d5.jpg"
+      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_NITRA%2520hrad%2520A0006109_7e3ebe81d5.jpg",
+      "localisation": "Nitra"
     },
-    "Castle2": {
+    "castle2": {
       "title": "Zamek Beckov",
       "description": "Legendarne ruiny zamku Beckov wznoszą się na stromym skalnym wzniesieniu o wysokości 50 m w miejscowości Beckov, niedaleko rzeki Váh w zachodniej Słowacji.",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_beckov1_pano_Schreiber%2520%25283%2529_a986585ef6.jpg"
+      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_beckov1_pano_Schreiber%2520%25283%2529_a986585ef6.jpg",
+      "localisation": "Beckov"
     },
-    "Castle3": {
+    "castle3": {
       "title": "Pałac Betliar",
       "description": "Pałac Betliar jest dominującym obiektem miejscowości Betliar, która znajduje się 10 km na północ od miasta powiatowego Rožňava. Naturalny park otaczający pałac należy do najcenniejszych i najlepiej zachowanych obiektów w swoim rodzaju na Słowacji. Rozpościera się na powierzchni 80 hektarów. Park urozmaicony egzotycznymi drzewami i krzewami został wkomponowany w okoliczną przyrodę.",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Betliar%2520Banner%2520004_a2233cd80f.jpg"
+      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Betliar%2520Banner%2520004_a2233cd80f.jpg",
+      "localisation": "Betliar"
     },
-    "Castle4": {
+    "castle4": {
       "title": "Pałac Bytča",
       "description": "Na uwagę odwiedzających północno-zachodnią Słowację zasługuej pałac  -  renesansowy skarb miasta Bytča.  Jest on jednym z niewielu pałaców renesansowych na Słowacji, który zachował swój  pierwotny wygląd, jakiego nie zmieniły późniejsze przebudowy.",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Depositphotos_285019280_ds_ece055a573.jpg"
+      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Depositphotos_285019280_ds_ece055a573.jpg",
+      "localisation": "Bytča"
     },
-    "Castle5": {
+    "castle5": {
       "title": "Stary Zamek Bańska Szczawnica",
       "description": "Główną dominantą centrum miasta  Banská Štiavnica, które figuruje na Liście Światowego Dziedzictwa Kulturowego i Przyrodniczego Ludzkości UNESCO jest Stary Zamek, położony w kierunku zachodnim od placu Trojičné námestie (Plac Świętej Trójcy).",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Lac_Staryzamok_jpg_ff2753e78b.jpg"
+      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Lac_Staryzamok_jpg_ff2753e78b.jpg",
+      "localisation": "Banská Štiavnica"
     },
-    "Castle6": {
+    "castle6": {
       "title": "Zamek Branč",
       "description": "Miłośników historii zainteresują ruiny zamku Branč, stojące na wyraźnym stożkowatym wzgórzu, które wznosi się 475 m. n. p. m. nad miejscowością Podbranč, w kierunku północno wschodnim od miejscowości Senica w południowo zachodniej Słowacji.",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Hrad%2520Bran%25C4%258D_CBS%252001_01_b22aee5e4d.jpg"
+      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Hrad%2520Bran%25C4%258D_CBS%252001_01_b22aee5e4d.jpg",
+      "localisation": "Podbranč"
     },
-    "Castle7": {
+    "castle7": {
       "title": "Zamek Bratysławski",
       "description": "Monumentalny Zamek Bratysławski widoczny jest z dużej odległości. Jego wyraźną sylwetkę zauważy każdy, kto odwiedzi Bratysławę. Majestat zamku podkreśla wzgórze, na którym stoi, które osiąga wysokość 85 m nad poziomem rzeki Dunaj.",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_D_Bratislavsky_hrad_jpg_354367e962.jpg"
+      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_D_Bratislavsky_hrad_jpg_354367e962.jpg",
+      "localisation": "Bratislava"
     },
-    "Castle8": {
+    "castle8": {
       "title": "Zamek Trenczyński",
       "description": "Dominantą miasta Trenčín (Trenczyn) i całego regionu Považie jest niewątpliwie Zamek Trenczyński (Trenčiansky hrad), wybudowany na stromej skale. Obok ZamkuSpiskiego i Zamku Devín jest jednym z największych w Europie.",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_5_Foto%2520Patrik%2520%25C5%25BD%25C3%25A1k%252C%2520Mesto%2520Tren%25C4%258D%25C3%25ADn-1920x%2520%25282%2529_2dda57d15a.jpg"
+      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_5_Foto%2520Patrik%2520%25C5%25BD%25C3%25A1k%252C%2520Mesto%2520Tren%25C4%258D%25C3%25ADn-1920x%2520%25282%2529_2dda57d15a.jpg",
+      "localisation": "Trenčín"
     }
   },
-  "Details": {
-    "Castle1": {
+  "details": {
+    "castle1": {
       "title": "Zamek w Nitrze",
       "description": "Główną dominantą najstarszego słowackiego miasta Nitra jest Zamek w Nitrze, wybudowany w miejscu ogromnego słowiańskiego grodziska, siedziby nitrzańskich książąt i władców Wielkich Moraw. Dziś jest siedzibą biskupstwa nitrzańskiego.",
       "localisation": "Nitriansky kraj, okres Nitra, Nitra",
@@ -50,7 +58,7 @@
       "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Nitra%2520okt%252003_13a28021df.jpg",
       "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_NITRA%2520hrad%2520A0006109_7e3ebe81d5.jpg"
     },
-    "Castle2": {
+    "castle2": {
       "title": "Zamek Beckov",
       "description": "Legendarne ruiny zamku Beckov wznoszą się na stromym skalnym wzniesieniu o wysokości 50 m w miejscowości Beckov, niedaleko rzeki Váh w zachodniej Słowacji.",
       "localisation": "Trenčiansky kraj, okres Nové Mesto nad Váhom, Beckov",
@@ -58,7 +66,7 @@
       "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Hrad%2520Beckov_CBS%252005_4f5f04a2cb.jpg",
       "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_BECKOV%2520A0007483%2520%25282%2529%2520%25283%2529_71446a9219.jpg"
     },
-    "Castle3": {
+    "castle3": {
       "title": "Pałac Betliar",
       "description": "Pałac Betliar jest dominującym obiektem miejscowości Betliar, która znajduje się 10 km na północ od miasta powiatowego Rožňava. Naturalny park otaczający pałac należy do najcenniejszych i najlepiej zachowanych obiektów w swoim rodzaju na Słowacji. Rozpościera się na powierzchni 80 hektarów. Park urozmaicony egzotycznymi drzewami i krzewami zostałwkomponowany w okoliczną przyrodę.",
       "localisation": "Košický kraj, okres Rožňava, Betliar",
@@ -66,7 +74,7 @@
       "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Betliar%2520Banner%2520004_a2233cd80f.jpg",
       "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_KASTIE~2%2520%25282%2529%2520%25283%2529%2520%25284%2529%2520%25285%2529_53e1b4688d.jpg"
     },
-    "Castle4": {
+    "castle4": {
       "title": "Pałac Bytča",
       "description": "Na uwagę odwiedzających północno-zachodnią Słowację zasługuej pałac  -  renesansowy skarb miasta Bytča.  Jest on jednym z niewielu pałaców renesansowych na Słowacji,który zachował swój  pierwotny wygląd, jakiego nie zmieniły późniejsze przebudowy.",
       "localisation": "Žilinský kraj, okres Bytča, Bytča",
@@ -74,14 +82,14 @@
       "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_D_Bytca_kastiel_jpg_29977183b3.jpg",
       "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Depositphotos_315494328_ds_e9c0f0e03c.jpg"
     },
-    "Castle5": {
+    "castle5": {
       "title": "Stary Zamek Bańska Szczawnica",
       "description": "Główną dominantą centrum miasta  Banská Štiavnica, które figuruje na Liście Światowego Dziedzictwa Kulturowego i Przyrodniczego Ludzkości UNESCO jest Stary Zamek, położonyw kierunku zachodnim od placu Trojičné námestie (Plac Świętej Trójcy).",
       "localisation": "Banskobystrický kraj, okres Banská Štiavnica, Banská Štiavnica",
       "address": "https://slovakia.travel/pl/stary-zamek-banska-szczawnica",
       "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Lac_Staryzamok_jpg_ff2753e78b.jpg"
     },
-    "Castle6": {
+    "castle6": {
       "title": "Zamek Branč",
       "description": "Miłośników historii zainteresują ruiny zamku Branč, stojące na wyraźnym stożkowatym wzgórzu, które wznosi się 475 m. n. p. m. nad miejscowością Podbranč, w kierunkupółnocno wschodnim od miejscowości Senica w południowo zachodniej Słowacji.",
       "localisation": "Trnavský kraj, okres Senica, Podbranč",
@@ -89,14 +97,14 @@
       "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Hrad%2520Bran%25C4%258D_CBS%252001_01_b22aee5e4d.jpg",
       "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Hrad%2520Bran%25C4%258D_CBS%252002_01_85be791375.jpg"
     },
-    "Castle7": {
+    "castle7": {
       "title": "Zamek Bratysławski",
       "description": "Monumentalny Zamek Bratysławski widoczny jest z dużej odległości. Jego wyraźną sylwetkę zauważy każdy, kto odwiedzi Bratysławę. Majestat zamku podkreśla wzgórze, na którymstoi, które osiąga wysokość 85 m nad poziomem rzeki Dunaj.",
       "localisation": "Bratislavský kraj, Bratislava",
       "address": "https://slovakia.travel/pl/zamek-bratyslawski",
       "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_D_Bratislavsky_hrad_jpg_354367e962.jpg"
     },
-    "Castle8": {
+    "castle8": {
       "title": "Zamek Trenczyński",
       "description": "Dominantą miasta Trenčín (Trenczyn) i całego regionu Považie jest niewątpliwie Zamek Trenczyński (Trenčiansky hrad), wybudowany na stromej skale. Obok Zamku Spiskiego iZamku Devín jest jednym z największych w Europie.",
       "localisation": "Trenčiansky kraj, okres Trenčín, Trenčín",
@@ -105,39 +113,39 @@
       "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Tren%25C4%258Diansk%25C3%25BD%2520hrad_1_05cdc5cb05.jpg"
     }
   },
-  "More": {
-    "Castle1": {
+  "more": {
+    "castle1": {
       "godziny": "kwiecień – październik: \n poniedziałek - niedziela: 7.00 – 18.00 \n listopad – marzec \n poniedziałek - niedziela: 7.00 – 17.00 \n Informację na temat godzin otwarcia udziela zarządzający",
       "kontakt": "NISYS Nitriansky System Informacyjny (NISYS Nitriansky informačný systém) \n NISYS Nitriansky informačný systém \n Štefánikova trieda 1 \n 949 01 Nitra \n Tel.: +421 (0) 37/16 186, 741 09 06 \n E-mail: info@nitra.sk \n www: www.nisys.sk"
     },
-    "Castle2": {
+    "castle2": {
       "godziny": "1. czerwiec – 31. sierpień \n poniedziałek – štvrtok, niedziela: 9.00 – 17.30 \n piątek – sobota: 9.00 – 20.30 \n Informację na temat godzin otwarcia udziela zarządzający",
       "cennik": "Dorośli: Od 3,30 € \n Bilet ulgowy: Od 2,20 € \n Cennik można uzyskać u zarządcy",
       "kontakt": "Hrad Beckov, Informácie - počas pracovných dní od 7:30 h do 15:30 h \n Beckov č. 180 \n 916 38 Beckov \n Tel.: +421 (0) 32/774 27 27 \n E-mail: info@hrad-beckov.sk \n www: www.hrad-beckov.sk"
     },
-    "Castle3": {
+    "castle3": {
       "godziny": "listopad - marzec \n wtorek - niedziela: 9.30 - 14.00 \n Informację na temat godzin otwarcia udziela zarządzający",
       "cennik": "Dorośli: Od 6,00 € \n Bilet ulgowy: Od 4,00 € \nCennik można uzyskać u zarządcy",
       "kontakt": "Múzeum Betliar - SNM \n Judita Krajčiová \n Kaštieľna 6 \n 049 21 Betliar \n Tel.: +421 (0) 58/798 31 18, +421 (0) 918 686 634 \n E-mail: judita.krajciova@snm.sk, betliar@snm.sk \n www: www.snm.sk, www.facebook.com/#!/MuzeumBetliar"
     },
-    "Castle4": {
+    "castle4": {
       "godziny": "W pałacu ma swoją siedzibę Państwowe Archiwum Regionalne. Możliwość zwiedzania tylko telefonicznym uzgodnieniu. W innych przypadkach pałac nie jest udostępniony dlazwiedzających.",
       "kontakt": "Państwowe archiwum regionalne \n Štátny archív Bytča \n Tel.: +421 (0) 41/553 33 11"
     },
-    "Castle5": {
+    "castle5": {
       "godziny": "środa - niedziela: 8:00 - 16:00 \n Informację na temat godzin otwarcia udziela zarządzający",
       "cennik": "Dorośli: Od 4 € \n Bilet ulgowy: Od 2 € \n Cennik można uzyskać u zarządcy"
     },
-    "Castle6": {
+    "castle6": {
       "godziny": "Wstęp wolny",
       "kontakt": "Obecný úrad Podbranč \n Podbranč 219 \n 906 41 Podbranč \n Tel.: +421 (0) 34/628 24 30 \n E-mail: oupodbranc@stonline.sk \n www: www.podbranc.sk"
     },
-    "Castle7": {
+    "castle7": {
       "godziny": "1. kwiecień - 16. listopad \n wtorek - niedziela: 10.00 - 18.00 \n 17. listopad - 31. marzec \n wtorek - niedziela: 9.00 - 17.00 \n Informację na temat godzin otwarcia udziela zarządzający",
       "cennik": "Dorośli: Od 6 € \n Bilet ulgowy: Od 3 € \n Cennik można uzyskać u zarządcy",
       "kontakt": "Muzeum Historyczne Słowackiego Muzeum Narodowego Bratysława \n Historické múzeum SNM Bratislava \n Mgr. Andrea Litváková \n Bratislavský hrad, P.O.BOX 13 \n 810 06 Bratislav \n Tel.: +421 (0) 2/2048 3104, +421 (0) 915/993 303 \n E-mail: andrea.litvakova@snm.sk \n www: www.snm.sk"
     },
-    "Castle8": {
+    "castle8": {
       "godziny": "maj - wrzesień \n poniedziałek - niedziela: 9.00 - 17.30 \n kwiecień - październik \n poniedziałek - niedziela: 9.00 - 16.30 \n listopad - marzec \n poniedziałek - niedziela: 9.00 - 15.30 \n Informację na temat godzin otwarcia udziela zarządzający",
       "cennik": "Dorośli: Od 3 € \n Bilet ulgowy: Od 1,5 € \n Cennik można uzyskać u zarządcy",
       "kontakt": "Muzeum w Trenczynie \n Trenčianske múzeum \n Mierové námestie 46 \n 912 50 Trenčín \n Tel.: +421 (0) 32/743 44 31, +421 (0) 32/743 56 57 \n E-mail: hrad@muzeumtn.sk \n www: www.muzeumtn.sk"

@@ -14,4 +14,4 @@ export default class ViewContainer {
             this.$el.append($img);
         }
     }
-}
+} 
