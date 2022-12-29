@@ -14,8 +14,8 @@ export default class Nav{
                 </ul>
             </div>
             <div class="nav-buttons">
-                <a href="#form"><button>${props.navContact.contact.text}</button></a>
-                <a href="#authors">${props.navContact.authors.text}</a>
+                <a href="${props.navContact.contact.link}"><button>${props.navContact.contact.text}</button></a>
+                <a href="${props.navContact.authors.link}">${props.navContact.authors.text}</a>
             </div>`;
     }
 }

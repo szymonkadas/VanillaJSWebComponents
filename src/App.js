@@ -1,11 +1,11 @@
 import Header from "./components/Header.js";
 import Explore from "./components/Explore.js";
-
+import ProjectInfo from "./components/ProjectInfo.js";
 export default class App {
     //Potem rozdziel state na state (modyfikowalne) i propsy (statyczne) 
     //Pomysł na state: przy zamkach dać okienka do zaznaczania odwiedzone, nie odwiedzone, itd. Dać też summary ulubionych zamków, odwiedzonych, notatki?   
     constructor(){
-        this.state = {
+        this.props = {
             //Jak do tej pory cały statyczny, do propsów
             header: {
                 nav: {
@@ -59,21 +59,96 @@ export default class App {
                     }
                 }
             },
-            body: fetch("./src/content.json").then((response) => {
+            explore: fetch("./src/content.json").then((response) => {
                 if(!response.ok){
                     throw new Error('failed loading, please try again later');
                 }
                 return response;
-            }).then((response) => response.json())
+            }).then((response) => response.json()),
+            projectInfo: {
+                projectBrief: {
+                    text: `Cześć! Projekt ten powstał w ramach samodoskonalenia się w zakresie frontendu, konkretniej by zrozumieć różne sposoby na tworzenie elementów na stronie w podobnym stylu do reacta.
+                    Metody wykorzystane w projekcie: modyfikacja innerHTML'a, z przemieszkami doc.createElement, append, a to czysto createElement, append z propsami i state'm, a także shadow dom.
+                    Dzięki temu mogłem lepiej zrozumieć jak działają frameworki typu React, wszystko w formie componentów (chociaż nie chciałem popaść w przesadyzm struktury componentów).
+                    A tematyka? Zważywszy na naukę języka słowackiego, była to całkiem dobra okazja by zapełnić tę stronę czymś ciekawym.`,
+                    authors:{
+                        author1:{
+                            img: "./images/authors/szymon.jpg",
+                            name: "Szymon Kadaś",
+                            roles: {
+                                class: "roles",
+                                content:{
+                                    icons: [
+                                        {src: "./images/roles/SASS.svg", alt: "CSS icon"},
+                                        {src: "./images/roles/JS.svg", alt: "JS icon"},
+                                        {src: "./images/roles/Design.svg", alt: "Design icon"},
+                                        {src: "./images/roles/Research.svg", alt: "Content Research icon"},
+                                        {src: "./images/roles/ProjectManager.svg", alt: "Manager icon"}
+                                    ],
+                                    text: ["SASS/CSS", "JS", "Website Design", "Content Research", "Project Manager"]
+                                }
+                            }
+                        },
+                        author2:{
+                            img: "./images/authors/anonymous.jpg",
+                            name: "Kacper B.",
+                            roles: {
+                                class: "roles",
+                                content: { 
+                                    icons: [
+                                        {src: "./images/roles/Ideas.svg", alt: "Ideas icon"},
+                                        {src: "./images/roles/Research.svg", alt: "Content Research icon"},
+                                    ],
+                                    text: ["Ideas", "Content Reasearch"]
+                                }
+                            }
+                        },
+                        author3: {
+                            img: "./images/authors/anonymous.jpg",
+                            name: "Adrian M.",
+                            roles: {
+                                class: "roles",
+                                content:{
+                                    icons: [
+                                        {src: "./images/roles/Content.svg", alt: "Content icon"},
+                                    ],
+                                    text: ["Content Creator"]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        this.state = {
+            //Tutaj dałoby się wsm wsadzić testy!
+            projectInfo: {
+                contact:{
+                    email: "",
+                    topic: "",
+                    message: "",
+                    setEmail: (text)=>{
+                       this.email = text; 
+                    },
+                    setEmail: (text)=>{
+                        this.topic = text;
+                    },
+                    setEmail: (text)=>{
+                        this.message = text;
+                    }
+                }
+            }
         }
         this.$root = document.getElementById('root');
         this.render();
     }
     async render(){
-        let header = new Header(this.state.header).$el;
-        let poznaj = new Explore(await this.state.body).$el;    
-        this.$root.append(header);
-        this.$root.append(poznaj);
+        let $header = new Header(this.props.header).$el;
+        let $poznaj = new Explore(await this.props.explore).$el;    
+        let $projectInfo = new ProjectInfo(this.props.projectInfo, this.state.projectInfo).$el;
+        this.$root.append($header);
+        this.$root.append($poznaj);
+        this.$root.append($projectInfo);
     }
 }
 

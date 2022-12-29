@@ -4,16 +4,21 @@ export default class Ul{
         this.$el.className = props.class;
         this.render(props.content);
     }
-    checkIcons(content, contentKeys){
+    checkIcons(content, contentKeys, index){
         if(contentKeys.includes('icon')){
             const img = document.createElement('img');
             img.src = content.icon.src;
             img.alt = content.icon.alt;
             return img;
+        }else if(contentKeys.includes('icons')){
+            const img = document.createElement('img');
+            img.src = content.icons[index].src;
+            img.alt = content.icons[index].alt;
+            return img;
         }
         return '';
     }
-    render(content){ 
+    render(content){ ;
         let contentKeys = Object.keys(content);
         if(contentKeys.includes('links')){
             content.links.forEach((link, index) => {
@@ -25,17 +30,17 @@ export default class Ul{
                 if(contentKeys.includes('text')){
                     $a.innerText = content.text[index]
                 }
-                $li.append(this.checkIcons(content, contentKeys));
+                $li.append(this.checkIcons(content, contentKeys, index));
                 $li.append($a)
                 this.$el.append($li);
             })
         }else if(contentKeys.includes('text')){
-            content.text.forEach(text => {
+            content.text.forEach((text, index) => {
                 const $li = document.createElement('li');
                 const $liContent = document.createElement('span');
                 $liContent.className = "li-content";
                 $liContent.textContent = text;
-                $li.append(this.checkIcons(content, contentKeys));
+                $li.append(this.checkIcons(content, contentKeys, index));
                 $li.append($liContent);
                 this.$el.append($li);
             })
