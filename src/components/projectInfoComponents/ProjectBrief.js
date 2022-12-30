@@ -12,7 +12,7 @@ export default class ProjectBrief{
         
         $text.className = "project-brief-text";
         $text.innerText += props.text;
-        $textHeader.innerText = "O projekcie:"
+        $textHeader.innerText = "O Projekcie:"
 
         this.$el.append($textHeader)
         this.$el.append($text);

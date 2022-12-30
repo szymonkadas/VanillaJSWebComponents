@@ -73,7 +73,7 @@ export default class App {
                     A tematyka? Zważywszy na naukę języka słowackiego, była to całkiem dobra okazja by zapełnić tę stronę czymś ciekawym.`,
                     authors:{
                         author1:{
-                            img: "./images/authors/szymon.jpg",
+                            img: "./images/authors/Szymon.jpg",
                             name: "Szymon Kadaś",
                             roles: {
                                 class: "roles",
@@ -85,12 +85,12 @@ export default class App {
                                         {src: "./images/roles/Research.svg", alt: "Content Research icon"},
                                         {src: "./images/roles/ProjectManager.svg", alt: "Manager icon"}
                                     ],
-                                    text: ["SASS/CSS", "JS", "Website Design", "Content Research", "Project Manager"]
+                                    text: ["SASS/CSS", "JS", "Design Strony", "Poszukiwanie Zawartości", "Kierownik Projektu"]
                                 }
                             }
                         },
                         author2:{
-                            img: "./images/authors/anonymous.jpg",
+                            img: "./images/authors/AnonymousAvatar.webp",
                             name: "Kacper B.",
                             roles: {
                                 class: "roles",
@@ -99,12 +99,12 @@ export default class App {
                                         {src: "./images/roles/Ideas.svg", alt: "Ideas icon"},
                                         {src: "./images/roles/Research.svg", alt: "Content Research icon"},
                                     ],
-                                    text: ["Ideas", "Content Reasearch"]
+                                    text: ["Pomysły", "Poszukiwanie Zawartości"]
                                 }
                             }
                         },
                         author3: {
-                            img: "./images/authors/anonymous.jpg",
+                            img: "./images/authors/AnonymousAvatar.webp",
                             name: "Adrian M.",
                             roles: {
                                 class: "roles",
@@ -112,7 +112,7 @@ export default class App {
                                     icons: [
                                         {src: "./images/roles/Content.svg", alt: "Content icon"},
                                     ],
-                                    text: ["Content Creator"]
+                                    text: ["Zbieracz Tekstu (json)"]
                                 }
                             }
                         }

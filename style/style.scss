@@ -99,8 +99,6 @@ nav{
     }
     .nav-tabs ul{
         @include nav-flex;
-        @include no_margin;
-        @include no_padding;
         justify-content: center;
         gap: 48px;
         .li-content{
@@ -121,7 +119,10 @@ nav{
         }
     }
 }
-
+ul{
+    @include no_margin;
+    @include no_padding;
+}
 #hero{
     @include one_to_one_grid;
     padding: 0px 10vw; 
@@ -259,6 +260,63 @@ nav{
         }
     }
 }
-// .project-info-content{
-// ssdas
-// }
+#project-desc{
+    margin: 48px 96px   ;
+    @include one_to_one_grid;   
+    .project-info-content{
+        background-color: $content-white;
+        border-radius: 16px;
+        padding: 16px 32px;
+        h2{
+            font-size: 40px;
+            @include no_margin;
+            margin: auto;
+            width: fit-content;
+        }
+        #authors{
+            margin-top: 16px;
+            .authors-container{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 32px;
+                .author-container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: initial;
+                    *{
+                        width: fit-content;
+                        // margin: auto;
+                    }
+                    h4{
+                        margin: 8px auto;
+                    }
+                    img{
+                        margin: 0 auto;
+                        width: 10vw;
+                        max-width: 160px;
+                        border-radius: 50%;
+                    }
+                    .roles{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        li{
+                            display: flex;
+                            margin: 0;
+                            column-gap: 8px;
+                            .li-content{
+                                font-size: 16px;
+                            }
+                        }
+                        img{
+                            border-radius: 0;
+                            height: 24px;
+                            width: 24px;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

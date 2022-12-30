@@ -67,8 +67,6 @@ nav .nav-tabs ul {
   height: 76px;
   justify-content: space-around;
   align-items: center;
-  margin: 0px;
-  padding: 0px;
   justify-content: center;
   gap: 48px;
 }
@@ -90,6 +88,11 @@ nav .nav-buttons button {
 }
 nav .nav-buttons button:hover {
   color: #DFDFDF;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
 }
 
 #hero {
@@ -268,4 +271,67 @@ nav .nav-buttons button:hover {
 #explore-container .explore .explore-info .explore-link button {
   margin-top: 16px;
   font-weight: 500;
+}
+
+#project-desc {
+  margin: 48px 96px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-content: center;
+  column-gap: 5vw;
+}
+#project-desc .project-info-content {
+  background-color: #DFDFDF;
+  border-radius: 16px;
+  padding: 16px 32px;
+}
+#project-desc .project-info-content h2 {
+  font-size: 40px;
+  margin: 0px;
+  margin: auto;
+  width: fit-content;
+}
+#project-desc .project-info-content #authors {
+  margin-top: 16px;
+}
+#project-desc .project-info-content #authors .authors-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 32px;
+}
+#project-desc .project-info-content #authors .authors-container .author-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+}
+#project-desc .project-info-content #authors .authors-container .author-container * {
+  width: fit-content;
+}
+#project-desc .project-info-content #authors .authors-container .author-container h4 {
+  margin: 8px auto;
+}
+#project-desc .project-info-content #authors .authors-container .author-container img {
+  margin: 0 auto;
+  width: 10vw;
+  max-width: 160px;
+  border-radius: 50%;
+}
+#project-desc .project-info-content #authors .authors-container .author-container .roles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#project-desc .project-info-content #authors .authors-container .author-container .roles li {
+  display: flex;
+  margin: 0;
+  column-gap: 8px;
+}
+#project-desc .project-info-content #authors .authors-container .author-container .roles li .li-content {
+  font-size: 16px;
+}
+#project-desc .project-info-content #authors .authors-container .author-container .roles img {
+  border-radius: 0;
+  height: 24px;
+  width: 24px;
 }/*# sourceMappingURL=style.css.map */
