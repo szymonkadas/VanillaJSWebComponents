@@ -120,32 +120,13 @@ export default class App {
                 }
             }
         }
-        this.state = {
-            //Tutaj dałoby się wsm wsadzić testy!
-            projectInfo: {
-                contact:{
-                    email: "",
-                    topic: "",
-                    message: "",
-                    setEmail: (text)=>{
-                       this.email = text; 
-                    },
-                    setEmail: (text)=>{
-                        this.topic = text;
-                    },
-                    setEmail: (text)=>{
-                        this.message = text;
-                    }
-                }
-            }
-        }
         this.$root = document.getElementById('root');
         this.render();
     }
     async render(){
         let $header = new Header(this.props.header).$el;
         let $poznaj = new Explore(await this.props.explore).$el;    
-        let $projectInfo = new ProjectInfo(this.props.projectInfo, this.state.projectInfo).$el;
+        let $projectInfo = new ProjectInfo(this.props.projectInfo).$el;
         this.$root.append($header);
         this.$root.append($poznaj);
         this.$root.append($projectInfo);

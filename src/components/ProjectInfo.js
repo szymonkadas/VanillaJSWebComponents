@@ -9,7 +9,7 @@ export default class ProjectInfo{
     }
     render(props, state){
         const $projectBrief = new ProjectBrief(props.projectBrief).$el;
-        const $contactForm = new Contact(state.contact).$el;
+        const $contactForm = new Contact().$el;
         this.$el.append($projectBrief);
         this.$el.append($contactForm);
     }

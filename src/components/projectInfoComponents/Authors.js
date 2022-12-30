@@ -33,7 +33,6 @@ export default class Authors{
         authorsKeys.forEach(authorKey => {
             const $author = this.authorComponent(props[authorKey]);
             $authorsContainer.append($author);
-            console.log(props[authorKey]);
         })  
         
         this.$el.append($header);
