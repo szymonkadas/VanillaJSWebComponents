@@ -6,13 +6,12 @@ export default class ProjectBrief{
         this.render(props, state);
     }
     render(props, state){
-        const $text = document.createElement('div');
         const $textHeader = document.createElement('h2');
+        const $text = document.createElement('div');
         const $authors = new Authors(props.authors).$el;
-        
-        $text.className = "project-brief-text";
-        $text.innerText += props.text;
+
         $textHeader.innerText = "O Projekcie:"
+        $text.innerText += props.text;
 
         this.$el.append($textHeader)
         this.$el.append($text);

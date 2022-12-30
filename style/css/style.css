@@ -329,6 +329,8 @@ ul {
 }
 #project-desc .project-info-content #authors .authors-container .author-container .roles li .li-content {
   font-size: 16px;
+  display: flex;
+  align-items: center;
 }
 #project-desc .project-info-content #authors .authors-container .author-container .roles img {
   border-radius: 0;
