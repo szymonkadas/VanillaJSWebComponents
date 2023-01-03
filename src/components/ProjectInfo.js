@@ -1,6 +1,6 @@
-import ProjectBrief from "./projectInfoComponents/ProjectBrief.js"
-import Contact from "./projectInfoComponents/Contact.js"
-
+import InfoContent from "./projectInfoComponents/InfoContent.js";
+import Form from "./projectInfoComponents/Form.js";
+import Authors from "./projectInfoComponents/Authors.js";
 export default class ProjectInfo{
     constructor(props, state){
         this.$el = document.createElement("div");
@@ -8,9 +8,14 @@ export default class ProjectInfo{
         this.render(props, state);
     }
     render(props, state){
-        const $projectBrief = new ProjectBrief(props.projectBrief).$el;
-        const $contactForm = new Contact().$el;
+        const $projectBrief = new InfoContent(props.infoContent1).$el;
+        const $contactFormContainer = new InfoContent(props.infoContent2).$el;
+        const $authors = new Authors(props.authors).$el;
+        const $contactForm = new Form().$el;
+
+        $projectBrief.append($authors);
+        $contactFormContainer.append($contactForm);
         this.$el.append($projectBrief);
-        this.$el.append($contactForm);
+        this.$el.append($contactFormContainer);
     }
 }

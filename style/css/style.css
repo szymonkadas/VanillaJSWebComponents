@@ -30,7 +30,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #222222;
+  color: #333;
   letter-spacing: 2px;
 }
 
@@ -285,6 +285,8 @@ ul {
   background-color: #DFDFDF;
   border-radius: 16px;
   padding: 16px 32px;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 #project-desc .project-info-content h2 {
   font-size: 40px;
@@ -336,4 +338,44 @@ ul {
   border-radius: 0;
   height: 24px;
   width: 24px;
+}
+#project-desc #contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+  row-gap: 16px;
+  height: 100%;
+}
+#project-desc #contact-form * {
+  width: 70%;
+}
+#project-desc #contact-form textarea {
+  resize: none;
+  height: 100%;
+  padding: 8px 16px;
+  background-color: #E8E8E8;
+  color: #666;
+  border: solid #CCC 0px;
+  border-bottom-width: 4px;
+}
+#project-desc #contact-form textarea:focus {
+  color: #333;
+  outline: solid 6px transparent;
+  border-color: #666;
+}
+#project-desc #contact-form button {
+  width: auto;
+}
+#project-desc #contact-form input {
+  padding: 8px 16px;
+  background-color: #E8E8E8;
+  color: #666;
+  border: solid #CCC 0px;
+  border-bottom-width: 4px;
+}
+#project-desc #contact-form input:focus {
+  color: #333;
+  outline: solid 6px transparent;
+  border-color: #666;
 }/*# sourceMappingURL=style.css.map */

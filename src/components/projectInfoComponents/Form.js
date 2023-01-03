@@ -1,8 +1,7 @@
 export default class Contact{
     constructor(){
-        this.$el = document.createElement("div");
+        this.$el = document.createElement("form");
         this.$el.id = "contact-form";
-        this.$el.className = "project-info-content";
         this.state = {
             email: "mail",
             topic: "",
@@ -10,13 +9,12 @@ export default class Contact{
         }
         this.setState = (callback) => {
             callback();
-            this.redraw(this.state);
+            this.redraw();
         }
-        this.render(this.state);
+        this.render();
     }
-    
-    form(){
-        const $form = document.createElement("form");
+
+    render(){
         const $contact_number = document.createElement("input");
         const $mail_input = document.createElement("input")
         const $topic_input = document.createElement("input");
@@ -24,14 +22,15 @@ export default class Contact{
         const $submit = document.createElement("button");
         const $submit_message = document.createElement("div");
 
+        //Email sending part
         $submit_message.id = "submitted";
-        $form.method = "post";
-        $form.onsubmit = (event) =>{
+        this.$el.method = "post";
+        this.$el.onsubmit = (event) =>{
             event.preventDefault();
             const $submitted = document.getElementById("submitted")
             console.log(this);
             const thisRef = this;
-            emailjs.sendForm('service_oy1rx9w', 'template_cltlbwq', $form)
+            emailjs.sendForm('service_oy1rx9w', 'template_cltlbwq', this.$el)
                 .then(function(){
                     console.log('Success');   
                     $submitted.innerText = "Wysłano/Submitted";
@@ -44,18 +43,28 @@ export default class Contact{
                     $submitted.innerText = "Nie udało się wysłać / failed to send mail";
                 })
         };
+
         //form elements setup
+        this.$el.id = "contact-form";
         $contact_number.type = "hidden";
         $contact_number.value = Math.random() * 100000 | 0;
-        $contact_number.name = "contact_number";        
+        $contact_number.name = "contact_number";      
+
         $mail_input.type = "email";
         $mail_input.name = "email";
         $mail_input.id = "email";
+        $mail_input.placeholder = "email address";
+
         $topic_input.type = "text";
         $topic_input.name = "topic";
         $topic_input.id = "topic";
+        $topic_input.placeholder = "topic";
+
         $message_input.name = "message";
         $message_input.id = "message";
+        $message_input.placeholder = "message";
+        
+        $submit.innerText = "wyślij/submit";
         //STATE
         $mail_input.onchange = (event) => {
             this.setState(()=>{
@@ -72,28 +81,16 @@ export default class Contact{
                 this.state.message = event.target.value;
             });
         }
-        $submit.innerText = "wyślij/submit";
+        
 
-        $form.append($contact_number);
-        $form.append($mail_input);
-        $form.append($topic_input);
-        $form.append($message_input);
-        $form.append($submit);
-        $form.append($submit_message);
-        this.$el.append($form);
+        this.$el.append($contact_number);
+        this.$el.append($mail_input);
+        this.$el.append($topic_input);
+        this.$el.append($message_input);
+        this.$el.append($submit);
+        this.$el.append($submit_message);
     }
-    render(){
-        const $header = document.createElement("h2");
-        const $text = document.createElement("div");
-        $text.className = "contact-text"
-        $header.innerText = "Kontakt/Contact:";
-        $text.innerText = `Jeśli masz jakieś porady odnośnie kodu/designu/htmla/cssa itp. lub przychodzisz z propozycją współpracy, zachęcam do wypełnienia formularza!
-        If you've got any tips about code/design/html/css etc. or if you're coming here with collab proposal, please use this contact form!`;
-        this.$el.append($header);
-        this.$el.append($text);
-        this.form()
-    }
-    redraw(state){
+    redraw(){
         const $mail_input = document.getElementById("email")
         const $topic_input = document.getElementById("topic");
         const $message_input = document.getElementById("message");

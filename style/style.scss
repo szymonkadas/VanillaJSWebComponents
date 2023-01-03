@@ -5,6 +5,7 @@
 $background-white: #E8E8E8;
 $content-white: #DFDFDF;
 $dark-white: #CCC;
+$light-dark: #666;
 $medium-dark: #444;
 $strong-dark: #333;
 @mixin icon_text{
@@ -70,7 +71,7 @@ li{
 a{
     text-decoration: none;
     &:hover{
-        color: #222222;
+        color: $strong-dark;
         letter-spacing: 2px;
     }
 }
@@ -267,6 +268,8 @@ ul{
         background-color: $content-white;
         border-radius: 16px;
         padding: 16px 32px;
+        display: grid;
+        grid-template-rows: auto 1fr;
         h2{
             font-size: 40px;
             @include no_margin;
@@ -319,6 +322,40 @@ ul{
                     }
                 }
             }
+        }
+    }
+    #contact-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 16px;
+        row-gap: 16px;
+        height: 100%;
+        *{
+            width: 70%;
+        }
+        @mixin inputs{
+            padding: 8px 16px;
+            background-color: $background-white;
+            color: $light-dark;
+            border: solid $dark-white 0px;
+            border-bottom-width: 4px;
+            &:focus{
+                color: $strong-dark;
+                outline: solid 6px transparent;
+                border-color: $light-dark;
+            }
+        }
+        textarea{
+            resize: none;
+            height: 100%;
+            @include inputs;
+        }
+        button{
+            width: auto;
+        }
+        input{
+            @include inputs;
         }
     }
 }
