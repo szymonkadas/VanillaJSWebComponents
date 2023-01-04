@@ -2,7 +2,7 @@ export default class ExploreLocalisation{
     constructor(props){
         this.$el = document.createElement("a");
         this.$el.className = "explore-localisation-container";
-        this.$el.href = "https://www.google.pl/maps/@49.4802629,19.7386106,13.58z";
+        this.$el.href = props.googleMaps;
         this.$el.target = "_blank";
         this.render(props);
     }
@@ -15,7 +15,7 @@ export default class ExploreLocalisation{
         $description.className = "localisation-description";
         // $description.textContent = props.textContent;
         // $description.href = props.googleMaps;
-        $description.textContent = props;
+        $description.textContent = props.localisation;
         this.$el.append($img);
         this.$el.append($description);
     }

@@ -11,11 +11,11 @@ export default class Explore{
     render(props){
         const exploreDivs = Object.keys(props);
         exploreDivs.forEach(explore => {
-            const {title, description, img, localisation} = props[explore];
+            const {title, description, img, localisation, googleMaps} = props[explore];
             const $explore = document.createElement('div');
             const $img = new ExploreImg({img, title}).$el;
             const $exploreInfo = document.createElement('div');
-            const $localisation = new ExploreLocalisation(localisation).$el;
+            const $localisation = new ExploreLocalisation({localisation, googleMaps}).$el;
             const $title = document.createElement('h3');
             const $description = document.createElement('p');
             const $exploreButtonLink = document.createElement('a');
