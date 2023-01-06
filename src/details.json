@@ -1,62 +1,4 @@
 {
-  "overview": {
-    "castle1": {
-      "title": "Zamek w Nitrze",
-      "description": "Główną dominantą najstarszego słowackiego miasta Nitra jest Zamek w Nitrze, wybudowany w miejscu ogromnego słowiańskiego grodziska, siedziby nitrzańskich książąt i władców Wielkich Moraw. Dziś jest siedzibą biskupstwa nitrzańskiego.",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_NITRA%2520hrad%2520A0006109_7e3ebe81d5.jpg",
-      "localisation": "Nitra",
-      "googleMaps": "https://goo.gl/maps/ghSZhjYjap3gejZh7"
-    },
-    "castle2": {
-      "title": "Zamek Beckov",
-      "description": "Legendarne ruiny zamku Beckov wznoszą się na stromym skalnym wzniesieniu o wysokości 50 m w miejscowości Beckov, niedaleko rzeki Váh w zachodniej Słowacji.",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_beckov1_pano_Schreiber%2520%25283%2529_a986585ef6.jpg",
-      "localisation": "Beckov",
-      "googleMaps": "https://goo.gl/maps/HMtUpht9GnseBYsd9"
-    },
-    "castle3": {
-      "title": "Pałac Betliar",
-      "description": "Pałac Betliar jest dominującym obiektem miejscowości Betliar, która znajduje się 10 km na północ od miasta powiatowego Rožňava. Naturalny park otaczający pałac należy do najcenniejszych i najlepiej zachowanych obiektów w swoim rodzaju na Słowacji. Rozpościera się na powierzchni 80 hektarów. Park urozmaicony egzotycznymi drzewami i krzewami został wkomponowany w okoliczną przyrodę.",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Betliar%2520Banner%2520004_a2233cd80f.jpg",
-      "localisation": "Betliar",
-      "googleMaps": "https://goo.gl/maps/sK7FPU5u5sxRKZYeA"
-    },
-    "castle4": {
-      "title": "Pałac Bytča",
-      "description": "Na uwagę odwiedzających północno-zachodnią Słowację zasługuej pałac  -  renesansowy skarb miasta Bytča.  Jest on jednym z niewielu pałaców renesansowych na Słowacji, który zachował swój  pierwotny wygląd, jakiego nie zmieniły późniejsze przebudowy.",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Depositphotos_285019280_ds_ece055a573.jpg",
-      "localisation": "Bytča",
-      "googleMaps": "https://goo.gl/maps/nf7TkMzTAh2C166a7"
-    },
-    "castle5": {
-      "title": "Stary Zamek Bańska Szczawnica",
-      "description": "Główną dominantą centrum miasta  Banská Štiavnica, które figuruje na Liście Światowego Dziedzictwa Kulturowego i Przyrodniczego Ludzkości UNESCO jest Stary Zamek, położony w kierunku zachodnim od placu Trojičné námestie (Plac Świętej Trójcy).",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Lac_Staryzamok_jpg_ff2753e78b.jpg",
-      "localisation": "Banská Štiavnica",
-      "googleMaps": "https://goo.gl/maps/TTUBxSApYKYMPGNz5"
-    },
-    "castle6": {
-      "title": "Zamek Branč",
-      "description": "Miłośników historii zainteresują ruiny zamku Branč, stojące na wyraźnym stożkowatym wzgórzu, które wznosi się 475 m. n. p. m. nad miejscowością Podbranč, w kierunku północno wschodnim od miejscowości Senica w południowo zachodniej Słowacji.",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Hrad%2520Bran%25C4%258D_CBS%252001_01_b22aee5e4d.jpg",
-      "localisation": "Podbranč",
-      "googleMaps": "https://goo.gl/maps/kJKGq1Hzmmb36Kht7"
-    },
-    "castle7": {
-      "title": "Zamek Bratysławski",
-      "description": "Monumentalny Zamek Bratysławski widoczny jest z dużej odległości. Jego wyraźną sylwetkę zauważy każdy, kto odwiedzi Bratysławę. Majestat zamku podkreśla wzgórze, na którym stoi, które osiąga wysokość 85 m nad poziomem rzeki Dunaj.",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_D_Bratislavsky_hrad_jpg_354367e962.jpg",
-      "localisation": "Bratislava",
-      "googleMaps": "https://goo.gl/maps/b1PXU2UbbDnNw3Py8"
-    },
-    "castle8": {
-      "title": "Zamek Trenczyński",
-      "description": "Dominantą miasta Trenčín (Trenczyn) i całego regionu Považie jest niewątpliwie Zamek Trenczyński (Trenčiansky hrad), wybudowany na stromej skale. Obok ZamkuSpiskiego i Zamku Devín jest jednym z największych w Europie.",
-      "img": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_5_Foto%2520Patrik%2520%25C5%25BD%25C3%25A1k%252C%2520Mesto%2520Tren%25C4%258D%25C3%25ADn-1920x%2520%25282%2529_2dda57d15a.jpg",
-      "localisation": "Trenčín",
-      "googleMaps": "https://goo.gl/maps/YHDSstkbgUKiYaNV6"
-    }
-  },
   "details": {
     "castle1": {
       "title": "Zamek w Nitrze",
@@ -64,7 +6,8 @@
       "localisation": "Nitriansky kraj, okres Nitra, Nitra",
       "address": "https://slovakia.travel/pl/zamek-w-nitrze",
       "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Nitra%2520okt%252003_13a28021df.jpg",
-      "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_NITRA%2520hrad%2520A0006109_7e3ebe81d5.jpg"
+      "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_NITRA%2520hrad%2520A0006109_7e3ebe81d5.jpg",
+      "GPS": "N48°19'6'' E18°5'12''"
     },
     "castle2": {
       "title": "Zamek Beckov",
@@ -72,7 +15,8 @@
       "localisation": "Trenčiansky kraj, okres Nové Mesto nad Váhom, Beckov",
       "address": "https://slovakia.travel/pl/zamek-beckov",
       "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Hrad%2520Beckov_CBS%252005_4f5f04a2cb.jpg",
-      "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_BECKOV%2520A0007483%2520%25282%2529%2520%25283%2529_71446a9219.jpg"
+      "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_BECKOV%2520A0007483%2520%25282%2529%2520%25283%2529_71446a9219.jpg",
+      "GPS": "N48°47'26'' E17°53'54''"
     },
     "castle3": {
       "title": "Pałac Betliar",
@@ -80,7 +24,8 @@
       "localisation": "Košický kraj, okres Rožňava, Betliar",
       "address": "https://slovakia.travel/pl/palac-betliar",
       "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Betliar%2520Banner%2520004_a2233cd80f.jpg",
-      "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_KASTIE~2%2520%25282%2529%2520%25283%2529%2520%25284%2529%2520%25285%2529_53e1b4688d.jpg"
+      "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_KASTIE~2%2520%25282%2529%2520%25283%2529%2520%25284%2529%2520%25285%2529_53e1b4688d.jpg",
+      "GPS": "N48°42'23'' E20°30'37''"
     },
     "castle4": {
       "title": "Pałac Bytča",
@@ -88,14 +33,16 @@
       "localisation": "Žilinský kraj, okres Bytča, Bytča",
       "address": "https://slovakia.travel/bytciansky-zamok",
       "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_D_Bytca_kastiel_jpg_29977183b3.jpg",
-      "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Depositphotos_315494328_ds_e9c0f0e03c.jpg"
+      "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Depositphotos_315494328_ds_e9c0f0e03c.jpg",
+      "GPS": "N49°13'14'' E18°33'33''"
     },
     "castle5": {
       "title": "Stary Zamek Bańska Szczawnica",
       "description": "Główną dominantą centrum miasta  Banská Štiavnica, które figuruje na Liście Światowego Dziedzictwa Kulturowego i Przyrodniczego Ludzkości UNESCO jest Stary Zamek, położonyw kierunku zachodnim od placu Trojičné námestie (Plac Świętej Trójcy).",
       "localisation": "Banskobystrický kraj, okres Banská Štiavnica, Banská Štiavnica",
       "address": "https://slovakia.travel/pl/stary-zamek-banska-szczawnica",
-      "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Lac_Staryzamok_jpg_ff2753e78b.jpg"
+      "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Lac_Staryzamok_jpg_ff2753e78b.jpg",
+      "GPS": "N48°27'34'' E18°53'27''"
     },
     "castle6": {
       "title": "Zamek Branč",
@@ -103,14 +50,16 @@
       "localisation": "Trnavský kraj, okres Senica, Podbranč",
       "address": "https://slovakia.travel/pl/zamek-branc",
       "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Hrad%2520Bran%25C4%258D_CBS%252001_01_b22aee5e4d.jpg",
-      "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Hrad%2520Bran%25C4%258D_CBS%252002_01_85be791375.jpg"
+      "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Hrad%2520Bran%25C4%258D_CBS%252002_01_85be791375.jpg",
+      "GPS": "N48°43'60'' E17°28'2''"
     },
     "castle7": {
       "title": "Zamek Bratysławski",
       "description": "Monumentalny Zamek Bratysławski widoczny jest z dużej odległości. Jego wyraźną sylwetkę zauważy każdy, kto odwiedzi Bratysławę. Majestat zamku podkreśla wzgórze, na którymstoi, które osiąga wysokość 85 m nad poziomem rzeki Dunaj.",
       "localisation": "Bratislavský kraj, Bratislava",
       "address": "https://slovakia.travel/pl/zamek-bratyslawski",
-      "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_D_Bratislavsky_hrad_jpg_354367e962.jpg"
+      "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_D_Bratislavsky_hrad_jpg_354367e962.jpg",
+      "GPS": "N48°8'32'' E17°6'0''"
     },
     "castle8": {
       "title": "Zamek Trenczyński",
@@ -118,7 +67,8 @@
       "localisation": "Trenčiansky kraj, okres Trenčín, Trenčín",
       "address": "https://slovakia.travel/pl/zamek-trenczynski",
       "img1": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_csm_5_Foto%2520Patrik%2520%25C5%25BD%25C3%25A1k%252C%2520Mesto%2520Tren%25C4%258D%25C3%25ADn-1920x%2520%25282%2529_2dda57d15a.jpg",
-      "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Tren%25C4%258Diansk%25C3%25BD%2520hrad_1_05cdc5cb05.jpg"
+      "img2": "http://sacr3-files.s3-eu-west-1.amazonaws.com/_processed_/csm_Tren%25C4%258Diansk%25C3%25BD%2520hrad_1_05cdc5cb05.jpg",
+      "GPS": "N48°53'39'' E18°2'41"
     }
   },
   "more": {

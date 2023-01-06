@@ -28,7 +28,7 @@ export default class Explore{
             $description.className = "explore-description";
             $description.textContent = description;
             $exploreButtonLink.className = "explore-link";
-            $exploreButtonLink.href = `./pages/Castle/#${explore}`
+            $exploreButtonLink.href = `./index.html?castle=${explore}`
             $exploreButtonLink.target = "_blank";
             $exploreButton.innerText = "więcej"
 

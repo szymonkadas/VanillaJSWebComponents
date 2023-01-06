@@ -1,7 +1,10 @@
+import scroll from "../../utils/scroll.js"
+
 export default class Ul{
     constructor(props, state){
         this.$el = document.createElement('ul');
         this.$el.className = props.class;
+        this.state = state; 
         this.render(props.content);
     }
     checkIcons(content, contentKeys, index){
@@ -30,6 +33,7 @@ export default class Ul{
                 if(contentKeys.includes('text')){
                     $a.innerText = content.text[index]
                 }
+                $a.onclick = () => scroll(link, this.state);
                 $li.append(this.checkIcons(content, contentKeys, index));
                 $li.append($a)
                 this.$el.append($li);
