@@ -29,7 +29,7 @@ export default class Explore{
             $description.textContent = description;
             $exploreButtonLink.className = "explore-link";
             $exploreButtonLink.href = `./index.html?castle=${explore}`
-            $exploreButtonLink.target = "_blank";
+            // $exploreButtonLink.target = "_blank";
             $exploreButton.innerText = "więcej"
 
             $exploreButtonLink.append($exploreButton);

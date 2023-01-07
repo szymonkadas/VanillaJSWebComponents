@@ -33,7 +33,8 @@ export default class HomePage extends HTMLElement {
                         },
                         button: {
                             class: "desc-button",
-                            text: "Spoznajte Slovensko"
+                            text: "Spoznajte Slovensko",
+                            link: "https://slovakia.travel/pl"
                         },
                         ul: {
                             hr: {

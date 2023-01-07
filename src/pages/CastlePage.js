@@ -1,5 +1,5 @@
 import Nav from "../components/headerComponents/Nav.js";
-
+import Hero from "../components/headerComponents/Hero.js";
 export default class CastlePage extends HTMLElement{
     constructor(){
         super();
@@ -16,7 +16,7 @@ export default class CastlePage extends HTMLElement{
                     },
                     class: "desc-list",
                     content: {
-                        text: ["Strona Główna", "Szczegóły", "Pokaż na mapie"]
+                        text: ["Strona Główna", "Szczegóły", "Jeszcze Więcej"]
                     }
                 }
             }
@@ -26,8 +26,7 @@ export default class CastlePage extends HTMLElement{
             nav:{
                 ul:{
                     content: {
-                        links: ["index.html", "#more"] //ostatni to będzie data.address jako even more
-                        //index.html do zmiany! na funkcję która usuwa z pathname'a argument castle by nie refreshowało, czy to będzie działać?
+                        links: ["index.html", "#more"] 
                     }
                 }
             }
@@ -39,25 +38,66 @@ export default class CastlePage extends HTMLElement{
         })
     }
     connectedCallback() {
-        const route = window.location.href.split("=");
-        let fetchingVariable = fetch("./src/details.json")
+        let route = window.location.href.split("=");
+        route = route[route.length-1].split("#");
+        fetch("./src/details.json")
         .then((response) => {
             if(!response.ok){
                 throw new Error('failed loading, please try again later');
             }
             return response;
         }).then((response) => this.props.data = response.json())
-        .then(() => this.currentCastle = route[route.length-1])
+        .then(() => {
+            this.state.route = route;
+        })
         .then(() => this.setup())
         .then(() => this.render())
-        // this.render(this.props, this.state);
     }
     async setup(){
         const data = await this.props.data;
-        if(data.details[this.currentCastle]){
+        //route[0] = current castle argument in url. [1] is #, current id positioning.
+        const currentCastleData = data.details[this.state.route[0]];
+        if(currentCastleData){
             const links = this.state.nav.ul.content.links;
-            links[1] += this.currentCastle;
-            links.push(data.details[this.currentCastle].address);
+            links.push(currentCastleData.address);
+            //maping images from details so i can use them below in props hero
+            let viewImages = Object.keys(currentCastleData)
+            .filter((item) => item.slice(0,3) === "img");
+            //checking if we have more than 3 images, if so ignore them with this map function
+            function mapImages(item, index){
+                return {
+                    alt: `Zdjęcie ${currentCastleData.title + " " + index}`,
+                    src: currentCastleData[item],
+                    id: `hero-img-${index+1}`
+                };
+            };
+            viewImages.length > 3 
+            ? viewImages = viewImages.slice(0,3).map(mapImages)
+            : viewImages = viewImages.map(mapImages)
+
+            this.props.hero = {
+                description_container: {
+                    class: "desc-hero",
+                    title: currentCastleData.title,
+                    details: {
+                        localisation: currentCastleData.localisation,
+                        gps: currentCastleData.GPS,
+                    },
+                    description: {
+                        class: "desc-p",
+                        text: currentCastleData.description
+                    },
+                    button: {
+                        class: "desc-button",
+                        text: "Zobacz na Mapie",
+                        link: "https://www.facebook.com/" 
+                    }
+                },
+                view_container: {
+                    class: "view-hero",
+                    images: viewImages
+                }
+            }
         }else{
             this.error();
         }
@@ -84,7 +124,9 @@ export default class CastlePage extends HTMLElement{
         }
         
         const $nav = new Nav(navData, {shadowThis: this}).$el;
+        const $hero = new Hero(this.props.hero).$el;
         this.shadow.append($nav);
+        this.shadow.append($hero);
         // const $nav = new Nav({...data, ...this.state})
     }
 }

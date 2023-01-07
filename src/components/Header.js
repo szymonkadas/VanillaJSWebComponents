@@ -7,10 +7,10 @@ export default class Header{
         this.render(props, state);
     }
     render(props, state){
-        const nav = new Nav(props.nav, state)
-        const hero = new Hero(props.hero);
+        const $nav = new Nav(props.nav, state)
+        const $hero = new Hero(props.hero);
         
-        this.$el.append(nav.$el);
-        this.$el.append(hero.$hero);
+        this.$el.append($nav.$el);
+        this.$el.append($hero.$el);
     }
 }
