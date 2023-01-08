@@ -17,5 +17,6 @@ export default class Nav{
             this.$el.children[1].append(new Ul(props.ul, state).$el)
             this.$el.children[2].children[0].onclick = () => scroll(props.navContact.contact.link, state);
             this.$el.children[2].children[1].onclick = () => scroll(props.navContact.authors.link, state);
+            
     }
 }

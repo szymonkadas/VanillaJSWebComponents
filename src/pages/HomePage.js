@@ -140,7 +140,6 @@ export default class HomePage extends HTMLElement {
         this.shadow.append($header);
         this.shadow.append($poznaj);
         this.shadow.append($projectInfo);
-        console.log(this.tagName);
     }
 }
 customElements.define('home-page', HomePage);

@@ -1,5 +1,5 @@
-import scroll from "../../utils/scroll.js"
-
+import scroll from "../../utils/scroll.js";
+import router from "../../utils/router.js";
 export default class Ul{
     constructor(props, state){
         this.$el = document.createElement('ul');
@@ -33,7 +33,26 @@ export default class Ul{
                 if(contentKeys.includes('text')){
                     $a.innerText = content.text[index]
                 }
-                $a.onclick = () => scroll(link, this.state);
+                // $a.addEventListener("click", (event)=>{
+                //     // if(contentKeys.includes('router')){
+                //     //     // console.log(content.onclick[index]);
+                //     //     // if(content.router[index]){
+                //     //     //     router;
+                //     //     // }
+                //     //     router;
+                //     // }
+                //     // if(link.includes("#")){
+                //     //     scroll(link, this.state)
+                //     // }
+                //     router;
+                // });
+                if(link.includes("#")){
+                    $a.onclick = () => scroll(link, this.state)
+                }else if(contentKeys.includes('router') && content.router[index]){
+                    $a.onclick = (event) => router(event);
+                }else if(contentKeys.includes('target') && content.target[index]){
+                    $a.target = "_blank";
+                }
                 $li.append(this.checkIcons(content, contentKeys, index));
                 $li.append($a)
                 this.$el.append($li);

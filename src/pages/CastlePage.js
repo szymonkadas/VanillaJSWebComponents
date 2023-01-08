@@ -16,7 +16,9 @@ export default class CastlePage extends HTMLElement{
                     },
                     class: "desc-list",
                     content: {
-                        text: ["Strona Główna", "Szczegóły", "Jeszcze Więcej"]
+                        text: ["Strona Główna", "Poprzedni Zamek", "Następny Zamek", "Źródło"],
+                        router: [false, true, true, false],
+                        target: [false, false, false, true]
                     }
                 }
             }
@@ -26,7 +28,7 @@ export default class CastlePage extends HTMLElement{
             nav:{
                 ul:{
                     content: {
-                        links: ["index.html", "#more"] 
+                        links: ["index.html"]
                     }
                 }
             }
@@ -36,10 +38,9 @@ export default class CastlePage extends HTMLElement{
             this.setup();
             this.render();
         })
+        window.addEventListener('popstate', ()=>this.rerender())
     }
     connectedCallback() {
-        let route = window.location.href.split("=");
-        route = route[route.length-1].split("#");
         fetch("./src/details.json")
         .then((response) => {
             if(!response.ok){
@@ -47,18 +48,32 @@ export default class CastlePage extends HTMLElement{
             }
             return response;
         }).then((response) => this.props.data = response.json())
-        .then(() => {
-            this.state.route = route;
-        })
         .then(() => this.setup())
         .then(() => this.render())
     }
     async setup(){
+        const route = window.location.href.split("=");
+        route.push(...route[route.length-1].split("#"));
+        this.state.route = route;
         const data = await this.props.data;
         //route[0] = current castle argument in url. [1] is #, current id positioning.
-        const currentCastleData = data.details[this.state.route[0]];
+        const currentCastleData = data.details[this.state.route[1]];
         if(currentCastleData){
+            //filling nav links 
             const links = this.state.nav.ul.content.links;
+            const numberRegex = /\d/;
+            let currentCastleNumber = parseInt(this.state.route[1].match(numberRegex)[0]);
+            const castlesQuantity = Object.keys(data.details).length;
+            if(currentCastleNumber<2){
+                links.push(this.state.route[0].concat(`=castle${castlesQuantity}`))
+                links.push(this.state.route[0].concat(`=castle${currentCastleNumber+1}`))
+            }else if(currentCastleNumber >= castlesQuantity){
+                links.push(this.state.route[0].concat(`=castle${currentCastleNumber-1}`))
+                links.push(this.state.route[0].concat(`=castle1`))
+            }else{
+                links.push(this.state.route[0].concat(`=castle${currentCastleNumber-1}`))
+                links.push(this.state.route[0].concat(`=castle${currentCastleNumber+1}`))
+            }
             links.push(currentCastleData.address);
             //maping images from details so i can use them below in props hero
             let viewImages = Object.keys(currentCastleData)
@@ -90,7 +105,7 @@ export default class CastlePage extends HTMLElement{
                     button: {
                         class: "desc-button",
                         text: "Zobacz na Mapie",
-                        link: "https://www.facebook.com/" 
+                        link: currentCastleData.googleMaps
                     }
                 },
                 view_container: {
@@ -101,6 +116,10 @@ export default class CastlePage extends HTMLElement{
         }else{
             this.error();
         }
+    }
+    async resetNav(){
+        let links = this.state.nav.ul.content.links;
+        this.state.nav.ul.content.links = [links[0]];
     }
     async error(){
         this.shadow.innerHTML += "Sorry, we haven't got the content you're looking for! : (, you'll be redirected in a second to previous site"
@@ -121,13 +140,18 @@ export default class CastlePage extends HTMLElement{
                     links: this.state.nav.ul.content.links
                 }
             }   
-        }
-        
+        } 
         const $nav = new Nav(navData, {shadowThis: this}).$el;
         const $hero = new Hero(this.props.hero).$el;
         this.shadow.append($nav);
         this.shadow.append($hero);
         // const $nav = new Nav({...data, ...this.state})
+    }
+    async rerender(){
+        this.shadow.innerHTML = "";
+        this.resetNav();
+        this.setup();
+        this.render();
     }
 }
 customElements.define('castle-page', CastlePage);

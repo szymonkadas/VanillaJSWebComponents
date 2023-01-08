@@ -10,17 +10,12 @@ export default class App {
     async render(){
         //router part:
         const route = window.location.href;
-        // console.log(route[route.length]);
-        //data-cośtam?
-        const homePageLinks = ["hero", "explore-container", "project-desc", "contact-form", "authors"];
-        if(homePageLinks.some((link) => route.includes(link)) || !route.includes("?")){
-            this.$root.innerHTML = "<home-page> </homepage>"
+        if(route.includes("?")){
+            this.$root.innerHTML = "<castle-page> </castle-page"
         }else{
-            this.$root.innerHTML = "<castle-page>"
+            // this.$root.innerHTML = "";
+            this.$root.innerHTML = "<home-page> </homepage>"
         }
-        // this.$root.innerHTML = "<home-page> </homepage>"
-        //do ogarnięcia z filmiku. Index.html damy normalnie tam gdzie był, w pages będą pliki htmla? potem na podstawie tego czy w routach będzie pages (split "/") i albo datą albo hashtagiem z lokacji będzie określało z danych jaki będzie poprawny zamek.
-       //a i castle page najlepiej by było gdyby nava miał zrecyklingowanego a resztę shadowDomem B)
     }
 }
 
