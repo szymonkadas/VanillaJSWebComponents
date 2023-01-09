@@ -1,7 +1,6 @@
 //Potem w folderze src, obok componentów zrób odrębne pliki scss, któe potem tutaj się po prostu zimportuje.
 //Każdy component będzie miał już na miejscu styl :) 
 
-//ZMNIEJSZ CZCIONKĘ, I WGL WSZYSTKO, W PROPORCJI 10:8;
 $background-white: #E8E8E8;
 $content-white: #DFDFDF;
 $dark-white: #CCC;
@@ -65,6 +64,9 @@ h3,h4,h5,h6{
     @include special-font;
     font-weight: 700;
 }
+h4{
+    font-size: 22px;
+}
 li{
     list-style: none;
 }
@@ -126,21 +128,39 @@ ul{
 }
 #hero{
     @include one_to_one_grid;
-    padding: 0px 10vw; 
+    padding: 0px 96px; 
     height: 100vh;
     .desc-hero{
         overflow: hidden;
         display: grid;
         grid-template-rows: max-content max-content max-content max-content max-content;
        h1{
-            font-size: 76px;
-            line-height: 104px;
+            font-size: 64px;
+            line-height: 80px;
             margin: 0px;
+            text-transform: uppercase;
        }
+       h4{
+            font-weight: 500;
+            margin: 0px;
+            line-height: 32px;
+       }
+       b{
+            @include special-font;
+            font-size: inherit;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
        button{
             justify-self: left;
             padding: 4px 12px;
             margin-top: 16px;
+       }
+       .desc-p{
+            margin: 8px 0px;
+            max-height: 30vh;
+            overflow-y: scroll;
+            @include default_font;
        }
        .desc-list-container{
             width: fit-content;
@@ -168,8 +188,11 @@ ul{
         position: relative;
         img{
             height: 480px; //1/1
+            max-width: 720px;
             position: absolute;
             border-radius: 24px;
+            object-fit: cover;
+            object-position: 50%;
         }
         #hero-img-1{
             top: -2vh;
@@ -262,7 +285,7 @@ ul{
     }
 }
 #project-desc{
-    margin: 48px 96px   ;
+    margin: 48px 96px;
     @include one_to_one_grid;   
     .project-info-content{
         background-color: $content-white;
@@ -357,5 +380,24 @@ ul{
         input{
             @include inputs;
         }
+    }
+}
+#details-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 48px 96px;
+  
+}
+.detail{
+    display: grid;
+    grid-template-rows: auto 1fr;    
+    justify-items: center;
+    text-align: center;
+    line-height: 32px;
+    // align-items: center;
+    h5{
+        font-size: 32px;
+        line-height: 40px;
+        margin: 0px;
     }
 }

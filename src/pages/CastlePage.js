@@ -1,5 +1,7 @@
 import Nav from "../components/headerComponents/Nav.js";
 import Hero from "../components/headerComponents/Hero.js";
+import CastleInfo from "../components/CastleInfo.js";
+
 export default class CastlePage extends HTMLElement{
     constructor(){
         super();
@@ -100,7 +102,7 @@ export default class CastlePage extends HTMLElement{
                     },
                     description: {
                         class: "desc-p",
-                        text: currentCastleData.description
+                        text: currentCastleData.description + "<br/>" + currentCastleData.detailed_description
                     },
                     button: {
                         class: "desc-button",
@@ -128,8 +130,8 @@ export default class CastlePage extends HTMLElement{
 
     async render(){
         this.shadow.innerHTML += `<link rel="stylesheet" href = "./style/css/style.css">`;
-        const route = window.location.href.split("=");
         const data = await this.props.data;
+        const currentCastle = this.state.route[1];
         //Dunno why Obj.assign, and {..., ...} merging did overwrite same properties, so only the later one remained, without previous props
         const navData = {
             ...this.props.nav,
@@ -143,9 +145,18 @@ export default class CastlePage extends HTMLElement{
         } 
         const $nav = new Nav(navData, {shadowThis: this}).$el;
         const $hero = new Hero(this.props.hero).$el;
+        let $moreDetailsContainer = ()=>{
+            const attributeNames = ["first", "second", "third", "fourth", "fifth", "sixth"]
+            const castleKeys = Object.keys(data.more[currentCastle])
+            const attributeValues = castleKeys.map((key, index)=>{
+                return `${attributeNames[index]}="<h5>${key[0].toUpperCase() + key.slice(1,)}:</h5> ${data.more[currentCastle][key]}"`
+            });
+            return `<details-component id="details-container" title="${data.details[currentCastle].title}" ${attributeValues.join(" ")}></details-component>`
+        }
+        $moreDetailsContainer = $moreDetailsContainer();
         this.shadow.append($nav);
         this.shadow.append($hero);
-        // const $nav = new Nav({...data, ...this.state})
+        this.shadow.innerHTML += $moreDetailsContainer;
     }
     async rerender(){
         this.shadow.innerHTML = "";

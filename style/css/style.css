@@ -22,6 +22,10 @@ h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+h4 {
+  font-size: 22px;
+}
+
 li {
   list-style: none;
 }
@@ -101,7 +105,7 @@ ul {
   align-content: center;
   justify-content: center;
   column-gap: 5vw;
-  padding: 0px 10vw;
+  padding: 0px 96px;
   height: 100vh;
 }
 #hero .desc-hero {
@@ -110,14 +114,35 @@ ul {
   grid-template-rows: max-content max-content max-content max-content max-content;
 }
 #hero .desc-hero h1 {
-  font-size: 76px;
-  line-height: 104px;
+  font-size: 64px;
+  line-height: 80px;
   margin: 0px;
+  text-transform: uppercase;
+}
+#hero .desc-hero h4 {
+  font-weight: 500;
+  margin: 0px;
+  line-height: 32px;
+}
+#hero .desc-hero b {
+  font-family: Cinzel, sans-serif;
+  font-size: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 #hero .desc-hero button {
   justify-self: left;
   padding: 4px 12px;
   margin-top: 16px;
+}
+#hero .desc-hero .desc-p {
+  margin: 8px 0px;
+  max-height: 30vh;
+  overflow-y: scroll;
+  font-size: 20px;
+  font-family: "Raleway", "Times New Roman";
+  font-weight: 300;
+  color: #444;
 }
 #hero .desc-hero .desc-list-container {
   width: fit-content;
@@ -157,8 +182,11 @@ ul {
 }
 #hero .view-hero img {
   height: 480px;
+  max-width: 720px;
   position: absolute;
   border-radius: 24px;
+  object-fit: cover;
+  object-position: 50%;
 }
 #hero .view-hero #hero-img-1 {
   top: -2vh;
@@ -378,4 +406,23 @@ ul {
   color: #333;
   outline: solid 6px transparent;
   border-color: #666;
+}
+
+#details-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 48px 96px;
+}
+
+.detail {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  text-align: center;
+  line-height: 32px;
+}
+.detail h5 {
+  font-size: 32px;
+  line-height: 40px;
+  margin: 0px;
 }/*# sourceMappingURL=style.css.map */
