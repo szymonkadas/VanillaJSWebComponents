@@ -407,6 +407,11 @@ ul {
   outline: solid 6px transparent;
   border-color: #666;
 }
+#project-desc #contact-form #submitted {
+  text-align: center;
+  color: green;
+  margin-bottom: 16px;
+}
 
 #details-container {
   display: grid;

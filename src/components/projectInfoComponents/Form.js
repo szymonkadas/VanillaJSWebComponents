@@ -27,20 +27,19 @@ export default class Contact{
         this.$el.method = "post";
         this.$el.onsubmit = (event) =>{
             event.preventDefault();
-            const $submitted = document.getElementById("submitted")
-            console.log(this);
             const thisRef = this;
             emailjs.sendForm('service_oy1rx9w', 'template_cltlbwq', this.$el)
                 .then(function(){
                     console.log('Success');   
-                    $submitted.innerText = "Wysłano/Submitted";
+                    $submit_message.innerText = "Wysłano/Submitted";
                     thisRef.setState(()=>{
                         thisRef.state.email = "";
                         thisRef.state.topic = "";
                         thisRef.state.message = "";
+                        console.log(thisRef.state);
                     })
                 }, function(error) {
-                    $submitted.innerText = "Nie udało się wysłać / failed to send mail";
+                    $submit_message.innerText = "Nie udało się wysłać / failed to send mail";
                 })
         };
 
@@ -91,11 +90,19 @@ export default class Contact{
         this.$el.append($submit_message);
     }
     redraw(){
-        const $mail_input = document.getElementById("email")
-        const $topic_input = document.getElementById("topic");
-        const $message_input = document.getElementById("message");
-        $mail_input.value = this.state.email;
-        $topic_input.value = this.state.topic;
-        $message_input.value = this.state.message;
+        console.log(this.state)
+        this.$el.childNodes.forEach((node)=>{
+            switch(node.name){
+                case "email":
+                    node.value = this.state.email;
+                    break;
+                case "topic":
+                    node.value = this.state.topic;
+                    break;
+                case "message":
+                    node.value = this.state.message
+                    break;                    
+            }
+        })
     }
 }

@@ -380,6 +380,11 @@ ul{
         input{
             @include inputs;
         }
+        #submitted{
+            text-align: center;
+            color: green;
+            margin-bottom: 16px;
+        }
     }
 }
 #details-container{
