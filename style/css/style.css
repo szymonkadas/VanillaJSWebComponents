@@ -130,8 +130,12 @@ ul {
   font-weight: 700;
   text-transform: uppercase;
 }
-#hero .desc-hero button {
+#hero .desc-hero .desc-button-link {
+  margin: 0px;
+  padding: 0px;
   justify-self: left;
+}
+#hero .desc-hero .desc-button {
   padding: 4px 12px;
   margin-top: 16px;
 }

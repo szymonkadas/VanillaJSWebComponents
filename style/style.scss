@@ -151,8 +151,12 @@ ul{
             font-weight: 700;
             text-transform: uppercase;
         }
-       button{
+       .desc-button-link{
+            margin: 0px;
+            padding: 0px;
             justify-self: left;
+       }
+       .desc-button{
             padding: 4px 12px;
             margin-top: 16px;
        }

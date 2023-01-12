@@ -5,7 +5,8 @@ export default class DescriptionContainer {
         this.$el.className = props.class;
         this.render(props);
     }
-    open_window = (address)=>{
+    open_window = (event, address)=>{
+        event.preventDefault();
         window.open(address, '_blank');
     };
     // onClick="window.open('https://slovakia.travel/pl', '_blank')"
@@ -23,9 +24,9 @@ export default class DescriptionContainer {
             <p class="${props.description.class}">
                 ${props.description.text}
             </p>
-            <button class="${props.button.class}">
-                ${props.button.text}
-            </button>`;
+            <a href="${props.button.link}" class="${props.button.class}-link" target="_blank">
+            </a>
+            `;
         if(props.ul){
             this.$el.innerHTML += `
                 <div class="desc-list-container">
@@ -34,8 +35,12 @@ export default class DescriptionContainer {
             `;
             this.$el.children.item(3).append(new Ul(props.ul).$el) //inside desc-list-container
         }
-        const button = this.$el.getElementsByTagName('button')[0]
-        button.onclick = () => this.open_window(props.button.link);
-       
+        //taking care of opening links in hero 
+        const $a = this.$el.getElementsByClassName(props.button.class+"-link")[0];
+        const $button = document.createElement('button');
+        $button.innerText = props.button.text;
+        $button.className = props.button.class;
+        $a.append($button);
+
     }
 }
