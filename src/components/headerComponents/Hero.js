@@ -4,7 +4,7 @@ import ViewContainer from "./heroComponents/ViewContainer.js";
 export default class Hero{
     constructor(props, state){
         // this.$nav = new Nav().render();
-        this.$el = document.createElement('div');
+        this.$el = document.createElement('section');
         this.$el.id = "hero";
         this.render(props);
     }

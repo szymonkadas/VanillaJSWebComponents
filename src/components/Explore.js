@@ -4,7 +4,7 @@ import ExploreLocalisation from "./exploreComponents/ExploreLocalisation.js";
 export default class Explore{
     constructor(props, state){
         // this.$nav = new Nav().render();
-        this.$el = document.createElement('div');
+        this.$el = document.createElement('article');
         this.$el.id = "explore-container";
         this.render(props.overview);
     }
@@ -12,7 +12,7 @@ export default class Explore{
         const exploreDivs = Object.keys(props);
         exploreDivs.forEach(explore => {
             const {title, description, img, localisation, googleMaps} = props[explore];
-            const $explore = document.createElement('div');
+            const $explore = document.createElement('section');
             const $img = new ExploreImg({img, title}).$el;
             const $exploreInfo = document.createElement('div');
             const $localisation = new ExploreLocalisation({localisation, googleMaps}).$el;
